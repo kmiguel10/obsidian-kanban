@@ -70,6 +70,7 @@ export interface KanbanSettings {
   'metadata-keys'?: DataKey[];
   'new-card-insertion-method'?: 'prepend' | 'prepend-compact' | 'append';
   'new-line-trigger'?: 'enter' | 'shift-enter';
+  'complete-card-trigger'?: 'command-enter' | 'ctrl-enter';
   'new-note-folder'?: string;
   'new-note-template'?: string;
   'archive-with-date'?: boolean;
@@ -109,6 +110,7 @@ export const settingKeyLookup: Record<keyof KanbanSettings, true> = {
   'metadata-keys': true,
   'new-card-insertion-method': true,
   'new-line-trigger': true,
+  'complete-card-trigger': true,
   'new-note-folder': true,
   'new-note-template': true,
   'archive-with-date': true,
@@ -223,6 +225,36 @@ export class SettingsManager {
           this.applySettingsUpdate({
             'new-line-trigger': {
               $set: value as 'enter' | 'shift-enter',
+            },
+          });
+        });
+      });
+
+    new Setting(contentEl)
+      .setName(t('Complete card trigger'))
+      .setDesc(
+        t('Select whether Command(⌘)+Enter or Ctrl(⌃)+Enter completes a card.')
+      )
+      .addDropdown((dropdown) => {
+        //Adds dropdown options
+        dropdown.addOption('command-enter', t('Command + Enter'));
+        dropdown.addOption('ctrl-enter', t('Ctrl + Enter'));
+
+        //I dont think I need this, but I need to set the new line trigger as enter by default
+        const [value, globalValue] = this.getSetting(
+          'complete-card-trigger',
+          local
+        );
+
+        //this sets the value...
+        dropdown.setValue(
+          (value as string) || (globalValue as string) || 'command-enter'
+        );
+
+        dropdown.onChange((value) => {
+          this.applySettingsUpdate({
+            'complete-card-trigger': {
+              $set: value as 'command-enter' | 'ctrl-enter',
             },
           });
         });

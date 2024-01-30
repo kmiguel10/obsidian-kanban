@@ -47,6 +47,11 @@ export default {
     'Select whether Enter or Shift+Enter creates a new line. The opposite of what you choose will create and complete editing of cards and lists.',
   'Shift + Enter': 'Shift + Enter',
   Enter: 'Enter',
+  'Complete card trigger': 'Complete card trigger',
+  'Select whether Command(⌘)+Enter or Ctrl(⌃)+Enter completes a card.':
+    'Select whether Command(⌘)+Enter or Ctrl(⌃)+Enter completes a card.',
+  'Command + Enter': 'Command + Enter',
+  'Ctrl + Enter': 'Ctrl + Enter',
   'Prepend / append new cards': 'Prepend / append new cards',
   'This setting controls whether new cards are added to the beginning or end of the list.':
     'This setting controls whether new cards are added to the beginning or end of the list.',
