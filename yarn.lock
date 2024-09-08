@@ -3648,10 +3648,10 @@ obsidian-dataview@^0.4.21:
     parsimmon "^1.18.0"
     preact "^10.6.5"
 
-obsidian-plugin-cli@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/obsidian-plugin-cli/-/obsidian-plugin-cli-0.8.1.tgz#0a5f9a9f92bd5bd50ee1d8bdb0f6263e080b4f00"
-  integrity sha512-PboFcOO5P3UVXohHTMX+oYUibcl3Y8GB9lgfTYhmJ67M69qBijKCRr2Oej0eeBevPLFtDAB7ALU0z76vOyBVLA==
+obsidian-plugin-cli@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/obsidian-plugin-cli/-/obsidian-plugin-cli-0.9.0.tgz#19843b4ad9c9d349bfb9558cc5237d40f826ea00"
+  integrity sha512-V62+WF+tBFMajBXopO85XwxXAbIAocWwKYPWRNDb2CIIPE5JJJoSVC5ZQ/o2kLP+3A38Om1YUiBtzJ/2kbbm3g==
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"
@@ -3661,15 +3661,15 @@ obsidian-plugin-cli@^0.8.1:
     cosmiconfig "^7.0.0"
     dedent "^0.7.0"
     esbuild "^0.12.6"
-    obsidian-utils "^0.10.0"
+    obsidian-utils "^0.10.2"
     prompts "^2.4.0"
     tslib "^1"
     update-notifier "^5.1.0"
 
-obsidian-utils@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/obsidian-utils/-/obsidian-utils-0.10.0.tgz#5cd13ec25b4a5a81b3210e390924f68da5f165f2"
-  integrity sha512-Mwhb94a81IwIY7tt5IOQjlSUYgcVjIYRCI0GMbEM9iUhrTOlHYYNek7Z5x+YjgX9CN1KjRKeCcCkA0K+PMKmBg==
+obsidian-utils@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/obsidian-utils/-/obsidian-utils-0.10.2.tgz#a37ca2745c6a20177d78aa2a11ac03ccc6175a28"
+  integrity sha512-LvD098hza7o+WnM7ra39xsvSazrjSLjynDsiMlCAE5Nv/mCcbYex72WeZkZ32TqdXLspTjfiI0pgRhKH4VuNEQ==
   dependencies:
     date-fns "^2.17.0"
     execa "^5.0.0"

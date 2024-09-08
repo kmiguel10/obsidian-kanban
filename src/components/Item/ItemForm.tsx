@@ -53,16 +53,23 @@ export function ItemForm({
       stateManager.setError(e);
     }
   };
-
   const onEnter = (e: KeyboardEvent) => {
+    // Check if Command (or Ctrl) key is pressed
+    const isCommandOrCtrlPressed = e.metaKey || e.ctrlKey;
+
     if (!allowNewLine(e, stateManager)) {
       e.preventDefault();
 
-      const title = itemTitle.trim();
+      if (isCommandOrCtrlPressed) {
+        // If Command (or Ctrl) key is pressed, save the item
+        onSubmit();
+      } else {
+        const title = itemTitle.trim();
 
-      if (title) {
-        addItemsFromStrings([title]);
-        setItemTitle('');
+        if (title) {
+          addItemsFromStrings([title]);
+          setItemTitle('');
+        }
       }
     }
   };

@@ -493,6 +493,7 @@ export function handleTab(
 }
 
 export function handleNewLine(textarea: HTMLTextAreaElement) {
+  console.log('newLine');
   const initialState = getStateFromTextarea(textarea);
 
   if (initialState.selection.start !== initialState.selection.end) {
